@@ -1,0 +1,94 @@
+\documentclass[a4paper,twocolumn]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T2A]{fontenc}
+\usepackage[russian]{babel}
+\usepackage{fancyhdr}
+\usepackage{csquotes}
+\usepackage{hyperref}
+\usepackage{graphicx}
+\usepackage{wrapfig}
+\usepackage{sverb}
+\usepackage{lastpage}
+\usepackage{listings}
+\usepackage{enumitem}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{lscape}
+% \usepackage{pdflscape}
+
+
+
+\usepackage[left=1cm, right=1cm, top=2cm, bottom=1.5cm, landscape]{geometry}
+
+
+\lstset{
+  basicstyle=\ttfamily,
+  columns=fixed,
+  fontadjust=true,
+  basewidth=0.5em
+}
+
+
+\pagestyle{fancy}
+\lhead{HSE <<Solved Normal Form>> (Khrushchev, Piskarev, Ustimenko)}
+\rhead{\thepage\ of \getpagerefnumber{LastPage}}
+% \pagenumbering{gobble}
+
+
+\begin{document}
+
+\tiny
+\footnotesize
+\scriptsize
+
+\section{******** general matching}
+\lstinputlisting{src/blossom.cpp}
+
+\section{suff}
+\lstinputlisting{src/suf_auto.cpp}
+
+\section{svg}
+\lstinputlisting{src/svg.cpp}
+
+\section{******** ntt}
+\lstinputlisting{src/ntt.hpp}
+
+\section{mod linear}
+\lstinputlisting{src/fisting_mod.cpp}
+
+\section{ntt}
+\lstinputlisting{src/ntt_short.cpp}
+
+\section{simd binsearch int32}
+\lstinputlisting{src/simd_binsearch.cpp}
+
+\section{Prime test + Rho factorization}
+\lstinputlisting{src/factorize.cpp}
+
+\section{Flow}
+\lstinputlisting{src/flow.cpp}
+
+\section{simd merge + compress}
+\lstinputlisting{src/simd_merge.cpp}
+
+\section{tree bitset}
+\lstinputlisting{src/tree_bitset.cpp}
+
+\includegraphics[width=0.5\textwidth]{src/prime_sqrt.png}
+
+% \newpage
+
+% \begin{enumerate}
+%   \item Уёбищный парсоч
+%   \item Суффавтомат
+%   \item Уёбищное NTT
+%   \item svg
+%   \item mod linear
+%   \item ntt с отбора на всесиб
+%   \item simd бинпоиск int32
+%   \item тест на простату + Поллард
+%   \item потоки
+%   \item simd merge
+% \end{enumerate}
+
+\end{document}
