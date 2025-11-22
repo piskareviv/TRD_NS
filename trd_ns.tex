@@ -1,7 +1,6 @@
 \documentclass[a4paper,twocolumn]{article}
 \usepackage[utf8]{inputenc}
 \usepackage[T2A]{fontenc}
-\usepackage[russian]{babel}
 \usepackage{fancyhdr}
 \usepackage{csquotes}
 \usepackage{hyperref}
@@ -14,6 +13,9 @@
 \usepackage{amssymb}
 \usepackage{amsmath}
 \usepackage{lscape}
+
+% \usepackage[russian]{babel}
+
 % \usepackage{pdflscape}
 
 
@@ -29,6 +31,15 @@
 }
 
 
+
+\hypersetup{
+    colorlinks=true,       % Enable colored links
+    linkcolor=blue,        % Color for internal links (e.g., sections, equations)
+    filecolor=magenta,     % Color for linked files
+    urlcolor=cyan,         % Color for external hyperlinks
+    pdftitle={Meow}, % PDF metadata title
+}
+
 \pagestyle{fancy}
 \lhead{HSE <<No souvenirs>> (Grekova, MacNeil, Piskarev)}
 \rhead{\thepage\ of \getpagerefnumber{LastPage}}
@@ -37,6 +48,11 @@
 
 \begin{document}
 
+
+
+\tableofcontents
+
+
 \tiny
 \footnotesize
 \scriptsize
@@ -44,37 +60,68 @@
 \section{******** general matching}
 \lstinputlisting{src/blossom.cpp}
 
-\section{suff}
-\lstinputlisting{src/suf_auto.cpp}
 
 \section{svg}
 \lstinputlisting{src/svg.cpp}
 
-\section{******** ntt}
-\lstinputlisting{src/ntt.hpp}
-
-\section{mod linear}
+\section{floor sum + mod linear}
 \lstinputlisting{src/fisting_mod.cpp}
 
-\section{ntt}
-\lstinputlisting{src/ntt_short.cpp}
+% \section{ntt}
+% \lstinputlisting{src/ntt_short.cpp}
 
-\section{simd binsearch int32}
-\lstinputlisting{src/simd_binsearch.cpp}
+% \section{simd binsearch int32}
+% \lstinputlisting{src/simd_binsearch.cpp}
 
-\section{Prime test + Rho factorization}
+\section{primality test + Rho factorization}
 \lstinputlisting{src/factorize.cpp}
 
-\section{Flow}
-\lstinputlisting{src/flow.cpp}
+% \section{Flow}
+% \lstinputlisting{src/flow.cpp}
 
-\section{simd merge + compress}
-\lstinputlisting{src/simd_merge.cpp}
+% \section{simd merge + compress}
+% \lstinputlisting{src/simd_merge.cpp}
 
 \section{tree bitset}
 \lstinputlisting{src/tree_bitset.cpp}
 
-\includegraphics[width=0.5\textwidth]{src/prime_sqrt.png}
+\section{link cut}
+\lstinputlisting{src/link_cut.hpp}
+
+\section{simplex}
+\lstinputlisting{src/simplex.hpp}
+
+\section{suffix array}
+\lstinputlisting{src/SA_IS.hpp}
+
+
+\section{dom tree}
+\lstinputlisting{src/dom.cpp}
+
+\section{poly}
+\lstinputlisting{src/poly.hpp}
+
+\section{multipoint}
+\lstinputlisting{src/multi_eval.hpp}
+
+
+\section{******** ntt}
+\lstinputlisting{src/ntt.hpp}
+
+
+\section{cached compile}
+\lstinputlisting{src/cached_compile.py}
+
+
+\section{suff automaton}
+\lstinputlisting{src/suf_auto.cpp}
+
+
+\section{sum kth powers}
+\includegraphics[width=0.5\textwidth]{src/sum_kth_powers.png}
+\includegraphics[width=0.5\textwidth]{src/sum_kth_powers_2.png}
+
+% \includegraphics[width=0.5\textwidth]{src/prime_sqrt.png}
 
 % \newpage
 
